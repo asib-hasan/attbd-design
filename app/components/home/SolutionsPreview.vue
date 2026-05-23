@@ -20,7 +20,7 @@
         <ItemCard
           v-for="s in solutions.slice(0, 8)"
           :key="s.slug"
-          :to="`/solutions/${s.slug}`"
+          :to="'/solutions/toll-management'"
           :title="s.title"
           :description="s.shortDesc"
           :icon="s.icon"

@@ -7,6 +7,8 @@ export interface Service {
   icon: string
   color: string
   highlights: string[]
+  image?: string
+  content?: string
 }
 
 export const services: Service[] = [
@@ -18,6 +20,16 @@ export const services: Service[] = [
     description: `ATT's installation teams bring decades of experience installing complex traffic and toll infrastructure across Bangladesh. Our teams follow strict quality procedures ensuring every installation meets the highest standards while minimizing disruption to ongoing traffic operations.`,
     icon: 'Wrench',
     color: 'from-blue-600 to-blue-800',
+    image: '/service.png',
+    content: `
+      <h3>Expert Installation & Commissioning</h3>
+      <p>ATT's installation teams bring decades of experience installing complex traffic and toll infrastructure across Bangladesh. Our teams follow strict quality procedures ensuring every installation meets the highest standards while minimizing disruption to ongoing traffic operations.</p>
+      <ul>
+        <li><strong>Certified Teams:</strong> Highly trained and certified field engineers.</li>
+        <li><strong>Minimal Disruption:</strong> Coordinated civil work and cable management.</li>
+        <li><strong>Full Documentation:</strong> Comprehensive as-built documentation provided upon commissioning.</li>
+      </ul>
+    `,
     highlights: ['Site survey & engineering', 'Civil work coordination', 'Certified field teams', 'Cable management', 'System commissioning', 'As-built documentation'],
   },
   {

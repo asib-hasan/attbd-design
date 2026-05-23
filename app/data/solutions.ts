@@ -7,6 +7,8 @@ export interface Solution {
   icon: string
   color: string
   features: string[]
+  image?: string
+  content?: string
 }
 
 export const solutions: Solution[] = [
@@ -18,6 +20,18 @@ export const solutions: Solution[] = [
     description: `ATT is the market leader in Electronic Toll Collection (ETC) in Bangladesh. We supply, install, and maintain state-of-the-art toll equipment, including lane processing systems, plaza servers, and central monitoring software. With decades of experience operating major toll plazas like Nalka-Hatikamrul-Banpara and Khan Jahan Ali Bridge, we handle millions in toll revenues efficiently and transparently.`,
     icon: 'CreditCard',
     color: 'from-blue-600 to-blue-800',
+    image: '/smart_traffic_solution.png',
+    content: `
+      <h3>Transforming Highway Operations</h3>
+      <p>ATT is the undisputed market leader in <strong>Electronic Toll Collection (ETC)</strong> in Bangladesh. We design, deploy, and maintain state-of-the-art toll equipment, including lane processing systems, plaza servers, and central monitoring software.</p>
+      <ul>
+        <li><strong>Electronic Toll Collection (ETC) equipment:</strong> Contactless RFID and smart card integration.</li>
+        <li><strong>Plaza Server and Central Monitoring:</strong> High-availability architecture for uninterrupted operations.</li>
+        <li><strong>Web-based online toll reporting:</strong> Real-time transparent revenue tracking.</li>
+        <li><strong>Long-term plaza operations:</strong> End-to-end management with dedicated on-ground staff.</li>
+      </ul>
+      <p>With decades of experience operating major toll plazas like the Nalka-Hatikamrul-Banpara and Khan Jahan Ali Bridge, we ensure optimal throughput and handle millions in toll revenues efficiently and securely.</p>
+    `,
     features: [
       'Electronic Toll Collection (ETC) equipment',
       'Plaza Server and Central Monitoring',

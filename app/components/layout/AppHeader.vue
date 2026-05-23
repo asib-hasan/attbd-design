@@ -33,7 +33,7 @@
 
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-3 flex-shrink-0">
-          <img src="/logo.jpeg" alt="ATT Logo" class="h-10 lg:h-12 w-auto mix-blend-multiply" />
+          <img src="/logo.png" alt="ATT Logo" class="h-10 lg:h-12 w-auto mix-blend-multiply" />
           <div class="hidden sm:block">
             <div class="font-bold text-base leading-tight text-primary-700">
               Asian Traffic Technologies
@@ -206,9 +206,9 @@ const aboutLinks = [
   { to: '/about#glimpse', label: 'A Glimpse of ATT' },
 ]
 
-const solutionsLinks = solutions.map(s => ({ to: `/solutions/${s.slug}`, label: s.title }))
-const productsLinks = products.map(p => ({ to: `/products/${p.slug}`, label: p.title }))
-const servicesLinks = services.map(s => ({ to: `/services/${s.slug}`, label: s.title }))
+const solutionsLinks = solutions.map(s => ({ to: '/solutions/toll-management', label: s.title }))
+const productsLinks = products.map(p => ({ to: '/products/counters-classifiers', label: p.title }))
+const servicesLinks = services.map(s => ({ to: '/services/installation', label: s.title }))
 
 const projectsLinks = [
   { to: '/projects?cat=completed', label: 'Completed Projects' },

@@ -12,7 +12,7 @@
           <ItemCard
             v-for="service in services"
             :key="service.slug"
-            :to="`/services/${service.slug}`"
+            :to="'/services/installation'"
             :title="service.title"
             :description="service.shortDesc"
             :icon="service.icon"

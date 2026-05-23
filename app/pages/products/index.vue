@@ -20,7 +20,7 @@
           <ItemCard
             v-for="product in products"
             :key="product.slug"
-            :to="`/products/${product.slug}`"
+            :to="'/products/counters-classifiers'"
             :title="product.title"
             :description="product.shortDesc"
             :icon="product.icon"

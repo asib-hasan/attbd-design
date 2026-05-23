@@ -8,6 +8,8 @@ export interface Product {
   color: string
   specs: string[]
   applications: string[]
+  image?: string
+  content?: string
 }
 
 export const products: Product[] = [
@@ -19,6 +21,17 @@ export const products: Product[] = [
     description: `ATT's traffic counters and classifiers are the go-to instruments for transport authorities requiring accurate vehicle count and classification data. Using pneumatic road tubes, inductive loops, or infrared sensors, these portable and permanent devices record vehicle volumes, speeds, and vehicle class (motorcycle, car, truck, bus, etc.) with high accuracy. Data is stored internally and can be downloaded wirelessly or via USB for analysis using ATT's reporting software.`,
     icon: 'Activity',
     color: 'from-blue-500 to-blue-700',
+    image: '/product.png',
+    content: `
+      <h3>Advanced Traffic Classification</h3>
+      <p>ATT's traffic counters and classifiers are the go-to instruments for transport authorities requiring accurate vehicle count and classification data. Using pneumatic road tubes, inductive loops, or infrared sensors, these portable and permanent devices record vehicle volumes, speeds, and vehicle class with high accuracy.</p>
+      <ul>
+        <li><strong>Up to 16-class vehicle classification:</strong> Comprehensive data collection.</li>
+        <li><strong>High Accuracy:</strong> Speed measurement accuracy ±2%.</li>
+        <li><strong>Durable:</strong> IP67 weatherproof enclosure built for harsh environments.</li>
+        <li><strong>Large Capacity:</strong> Internal memory for up to 1 million records.</li>
+      </ul>
+    `,
     specs: [
       'Up to 16-class vehicle classification',
       'Speed measurement accuracy ±2%',

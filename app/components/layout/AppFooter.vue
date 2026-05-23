@@ -7,7 +7,7 @@
         <!-- Brand Column -->
         <div class="lg:col-span-1">
           <NuxtLink to="/" class="flex items-center gap-3 mb-5">
-            <img src="/logo.jpeg" alt="ATT Logo" class="h-12 w-auto" />
+            <img src="/logo.png" alt="ATT Logo" class="h-12 w-auto" />
           </NuxtLink>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
             Asian Traffic Technologies Ltd is Bangladesh's leading provider of Intelligent Transportation Systems, toll collection, traffic monitoring, and access control solutions.
@@ -126,7 +126,7 @@ const quickLinks = [
 ]
 
 const solutionLinks = solutions.slice(0, 6).map(s => ({
-  to: `/solutions/${s.slug}`,
+  to: '/solutions/toll-management',
   label: s.title,
 }))
 </script>

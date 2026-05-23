@@ -20,7 +20,7 @@
           <ItemCard
             v-for="solution in solutions"
             :key="solution.slug"
-            :to="`/solutions/${solution.slug}`"
+            :to="'/solutions/toll-management'"
             :title="solution.title"
             :description="solution.shortDesc"
             :icon="solution.icon"
