@@ -69,6 +69,7 @@ export const products: Product[] = [
       'Bridge load monitoring',
       'Toll enforcement',
     ],
+    image: '/smart_traffic_solution.png',
   },
   {
     id: 3,
@@ -92,6 +93,7 @@ export const products: Product[] = [
       'Construction site vehicle monitoring',
       'Research & survey programs',
     ],
+    image: '/projects/weigh-bridge.png',
   },
   {
     id: 4,
@@ -115,6 +117,7 @@ export const products: Product[] = [
       'Government & embassy compounds',
       'Parking management systems',
     ],
+    image: '/slider/hero_access_security.png',
   },
   {
     id: 5,
@@ -138,6 +141,7 @@ export const products: Product[] = [
       'School zone speed control',
       'Intersection management',
     ],
+    image: '/slider/hero_traffic_system.png',
   },
   {
     id: 6,
@@ -161,6 +165,7 @@ export const products: Product[] = [
       'Toll plazas (weight-based tolling)',
       'Research & pavement studies',
     ],
+    image: '/product.png',
   },
   {
     id: 7,
@@ -184,6 +189,7 @@ export const products: Product[] = [
       'Industrial process control',
       'Remote site power management',
     ],
+    image: '/service.png',
   },
   {
     id: 8,
@@ -207,6 +213,7 @@ export const products: Product[] = [
       'Off-grid CCTV systems',
       'Solar toll booths',
     ],
+    image: '/slider/hero_traffic_system.png',
   },
   {
     id: 9,
@@ -230,5 +237,6 @@ export const products: Product[] = [
       'Toll rate information boards',
       'Queue length indicators',
     ],
+    image: '/slider/hero_toll_collection.png',
   },
 ]
