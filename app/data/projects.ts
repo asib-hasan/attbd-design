@@ -10,6 +10,7 @@ export interface Project {
   icon: string
   color: string
   achievements: string[]
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -25,6 +26,7 @@ export const projects: Project[] = [
     icon: 'Building2',
     color: 'from-blue-600 to-blue-800',
     achievements: ['4-Lane Toll Plaza Installation', 'Long-term Operation & Maintenance', 'Revenue collection management', 'Hardware manufacturing'],
+    image: '/projects/toll-plaza.png',
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     icon: 'CreditCard',
     color: 'from-blue-500 to-cyan-700',
     achievements: ['8-Lane System Installation', 'Multi-phase O&M Contracts', 'Significant revenue handling', 'System supply and design'],
+    image: '/slider/hero_toll_collection.png',
   },
   {
     id: 3,
@@ -51,6 +54,7 @@ export const projects: Project[] = [
     icon: 'Scale',
     color: 'from-green-600 to-emerald-800',
     achievements: ['100 Metric Ton WIM Scales', 'Bridge structure protection', 'Real-time dynamic weighing', 'High-capacity load cells'],
+    image: '/projects/weigh-bridge.png',
   },
   {
     id: 4,
@@ -64,6 +68,7 @@ export const projects: Project[] = [
     icon: 'Shield',
     color: 'from-slate-600 to-slate-900',
     achievements: ['2-Stage Security Gate', '100 MT Truck Scales', 'Under Vehicle Inspection System', 'Biometric & CCTV integration'],
+    image: '/projects/cctv.png',
   },
   {
     id: 5,
@@ -77,6 +82,7 @@ export const projects: Project[] = [
     icon: 'KeyRound',
     color: 'from-violet-600 to-purple-800',
     achievements: ['10 Human Access Lanes', '5 Vehicle Access Gates', 'High-security government deployment', 'Integrated turnstiles'],
+    image: '/slider/hero_access_security.png',
   },
   {
     id: 6,
@@ -90,6 +96,7 @@ export const projects: Project[] = [
     icon: 'Building2',
     color: 'from-orange-500 to-red-700',
     achievements: ['Bridge Construction', 'Approach Road Civil Works', 'Government urban development', 'Structural engineering'],
+    image: '/slider/hero_traffic_system.png',
   },
   {
     id: 7,
@@ -103,6 +110,7 @@ export const projects: Project[] = [
     icon: 'Scale',
     color: 'from-cyan-600 to-blue-700',
     achievements: ['100 MT Truck Scale', 'Border trade facilitation', 'Heavy duty industrial scale', 'Hardware manufacturing'],
+    image: '/projects/weigh-bridge.png',
   },
   {
     id: 8,
@@ -116,6 +124,7 @@ export const projects: Project[] = [
     icon: 'Activity',
     color: 'from-teal-600 to-cyan-800',
     achievements: ['910m River Bank Protection', 'Erosion control', 'Water resource management', 'Large-scale civil engineering'],
+    image: '/slider/hero_traffic_system.png',
   },
   {
     id: 9,
@@ -129,6 +138,7 @@ export const projects: Project[] = [
     icon: 'Building2',
     color: 'from-emerald-600 to-green-800',
     achievements: ['Multi-school infrastructure', 'Furniture & Electrical works', 'Rural development support', 'Educational facilities'],
+    image: '/slider/hero_access_security.png',
   },
   {
     id: 10,
@@ -142,6 +152,7 @@ export const projects: Project[] = [
     icon: 'Ship',
     color: 'from-blue-700 to-indigo-900',
     achievements: ['31 Vessel Fleet Operations', 'Cargo & Oil Transport', 'Ship Building & Manufacture', 'Cross-border capability'],
+    image: '/slider/hero_toll_collection.png',
   },
 ]
 

@@ -2,7 +2,7 @@
   <section class="py-16 bg-white border-b border-slate-100 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
       <div class="text-center">
-        <h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Our Clients</h2>
+        <h2 class="text-2xl font-black text-slate-900 uppercase tracking-widest border-b-2 border-slate-200 pb-4 inline-block px-8">Our Clients</h2>
       </div>
     </div>
     

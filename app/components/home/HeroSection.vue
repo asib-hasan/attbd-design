@@ -23,18 +23,18 @@
         <div class="relative z-10 w-full h-full flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
           <div class="max-w-3xl">
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-up delay-100 drop-shadow-lg">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase text-white leading-tight mb-6 animate-fade-up drop-shadow-2xl">
               <span v-html="slide.title"></span>
             </h1>
             
-            <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-10 animate-fade-up delay-200 drop-shadow-md">
+            <p class="text-lg md:text-xl text-slate-200 leading-relaxed font-medium max-w-2xl mb-10 animate-fade-up delay-200 drop-shadow-md">
               {{ slide.description }}
             </p>
             
             <div class="flex flex-wrap gap-4 animate-fade-up delay-300">
               <NuxtLink
                 :to="slide.secondaryLink"
-                class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors flex items-center gap-2 shadow-lg shadow-accent-500/30"
+                class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold uppercase tracking-wider rounded-none transition-colors flex items-center gap-2"
               >
                 {{ slide.secondaryLabel }}
               </NuxtLink>
@@ -84,7 +84,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 const slides = [
   {
     id: 1,
-    title: 'Intelligent<br/><span class="text-accent-400">Transportation</span><br/>Systems',
+    title: 'Intelligent<br/><span class="text-accent-500">Transportation</span><br/>Systems',
     description: 'Asian Traffic Technologies Ltd delivers world-class toll collection, traffic monitoring, and highway management systems across Bangladesh.',
     secondaryLabel: 'Contact Us',
     secondaryLink: '/contact',
@@ -92,7 +92,7 @@ const slides = [
   },
   {
     id: 2,
-    title: 'Seamless<br/><span class="text-blue-400">Electronic Toll</span><br/>Collection',
+    title: 'Seamless<br/><span class="text-accent-500">Electronic Toll</span><br/>Collection',
     description: 'Pioneering advanced ETC solutions with RFID technology to reduce congestion and improve national highway efficiency.',
     secondaryLabel: 'Learn More',
     secondaryLink: '/solutions/toll-management',
@@ -100,7 +100,7 @@ const slides = [
   },
   {
     id: 3,
-    title: 'Advanced<br/><span class="text-emerald-400">Access Control</span><br/>& Security',
+    title: 'Advanced<br/><span class="text-accent-500">Access Control</span><br/>& Security',
     description: 'Comprehensive hardware and software solutions for securing industrial facilities, ports, and critical infrastructure.',
     secondaryLabel: 'View Services',
     secondaryLink: '/services',

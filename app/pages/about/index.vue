@@ -49,24 +49,18 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <div id="mission" class="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm hover:shadow-lg transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white mb-6">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Our Missions</h3>
-            <ul class="text-slate-500 leading-relaxed list-disc list-inside ml-2 space-y-3">
+          <div id="mission" class="bg-white border border-slate-200 border-l-4 border-l-primary-600 p-8 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-black text-slate-900 uppercase tracking-wide mb-4">Our Missions</h3>
+            <ul class="text-slate-600 leading-relaxed list-disc list-inside ml-2 space-y-3">
               <li>To hold the leadership in Bangladesh by means of continuous strive in offering quality management for Operation & Maintenance of ETC for Roads & Highways.</li>
               <li>To become the market leader for Highways Systems Technology development in Bangladesh.</li>
               <li>To provide proper security system all over Bangladesh.</li>
             </ul>
           </div>
 
-          <div id="vision" class="bg-white rounded-2xl border border-slate-100 p-8 shadow-sm hover:shadow-lg transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-orange-600 flex items-center justify-center text-white mb-6">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-3">Our Vision</h3>
-            <p class="text-slate-500 leading-relaxed mb-4">
+          <div id="vision" class="bg-white border border-slate-200 border-l-4 border-l-accent-500 p-8 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-black text-slate-900 uppercase tracking-wide mb-4">Our Vision</h3>
+            <p class="text-slate-600 leading-relaxed">
               In a world where complexity increasingly touches every aspect of our daily lives, we will lead in bringing sense and simplicity to people.
             </p>
           </div>
@@ -74,24 +68,17 @@
       </div>
     </section>
 
-    <!-- A Glimpse of ATT -->
+    <!-- Company History -->
     <section id="glimpse" class="py-24 bg-white relative overflow-hidden border-t border-slate-100">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full border border-blue-100 mb-10 shadow-sm">
-          A Glimpse of ATT
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-10">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-semibold rounded-full border border-blue-100 mb-4 shadow-sm">
+            Company History
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">A Glimpse of ATT</h2>
         </div>
         
-        <div class="space-y-8 text-lg md:text-xl text-slate-600 leading-relaxed font-light">
-          <p>
-            It is the sincere efforts and aggressive leadership having dynamic visions of <span class="text-slate-900 font-medium">Engineer Mehboob Kabir</span> without whose dedicated persuasion, ATT would not have reached on its present stand now.
-          </p>
-          <p>
-            Since the Inception of ATT in the year 2002, ATT now could now play as a market leader of ETC (Electronic Toll Collection Systems, Operation and Maintenance) for Roads & Highways of Bangladesh, Human & Vehicle Access System as well as security system, Ship Building and Operation. About 80% of total market share of above business is now being enjoyed by ATT and its Associates.
-          </p>
-          <p>
-            The company though made its further strive putting its footage into other business arena whilst ETC remains the core business of the company.
-          </p>
-        </div>
+        <Timeline :events="historyEvents" />
       </div>
     </section>
 
@@ -107,33 +94,21 @@
         </div>
 
         <div class="grid md:grid-cols-4 gap-6">
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-4 text-blue-600">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h3 class="font-bold text-slate-900 mb-2">Mehboob & Masood Navigation</h3>
-            <p class="text-xs text-slate-500">Ship Operation & Logistics</p>
+          <div class="bg-slate-50 border-t-2 border-slate-200 p-6 text-center hover:border-blue-600 transition-colors">
+            <h3 class="font-bold text-slate-900 uppercase text-sm tracking-wide mb-2 mt-2">Mehboob & Masood Navigation</h3>
+            <p class="text-sm text-slate-500">Ship Operation & Logistics</p>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-4 text-cyan-600">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            </div>
-            <h3 class="font-bold text-slate-900 mb-2">Shams Navigation</h3>
-            <p class="text-xs text-slate-500">Carrier Operation</p>
+          <div class="bg-slate-50 border-t-2 border-slate-200 p-6 text-center hover:border-cyan-600 transition-colors">
+            <h3 class="font-bold text-slate-900 uppercase text-sm tracking-wide mb-2 mt-2">Shams Navigation</h3>
+            <p class="text-sm text-slate-500">Carrier Operation</p>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-4 text-indigo-600">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-            </div>
-            <h3 class="font-bold text-slate-900 mb-2">Engineer Mehboob Ship Builders</h3>
-            <p class="text-xs text-slate-500">Ship Building & Manufacturing</p>
+          <div class="bg-slate-50 border-t-2 border-slate-200 p-6 text-center hover:border-indigo-600 transition-colors">
+            <h3 class="font-bold text-slate-900 uppercase text-sm tracking-wide mb-2 mt-2">Engineer Mehboob Ship Builders</h3>
+            <p class="text-sm text-slate-500">Ship Building & Manufacturing</p>
           </div>
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 text-center hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mx-auto mb-4 text-emerald-600">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-            </div>
-            <h3 class="font-bold text-slate-900 mb-2">A M Corporation</h3>
-            <p class="text-xs text-slate-500">General Trading & Supply</p>
+          <div class="bg-slate-50 border-t-2 border-slate-200 p-6 text-center hover:border-emerald-600 transition-colors">
+            <h3 class="font-bold text-slate-900 uppercase text-sm tracking-wide mb-2 mt-2">A M Corporation</h3>
+            <p class="text-sm text-slate-500">General Trading & Supply</p>
           </div>
         </div>
       </div>
@@ -180,7 +155,28 @@ const companyStats = [
   { value: '31', label: 'Owned Vessels', sub: 'Cargo & Tankers', bg: 'bg-purple-50', color: 'text-purple-700' },
 ]
 
-
+const historyEvents = [
+  {
+    year: '2002',
+    title: 'Company Inception',
+    description: 'ATT was founded by Engineer Mehboob Kabir with a vision to revolutionize toll management in Bangladesh.'
+  },
+  {
+    year: '2010',
+    title: 'Market Leadership in ETC',
+    description: 'Achieved a dominant market position, handling Electronic Toll Collection (ETC) operations for major roads and highways.'
+  },
+  {
+    year: '2015',
+    title: 'Expansion into Ship Building',
+    description: 'Diversified operations into shipbuilding, carrier operation, and navigation through sister concerns.'
+  },
+  {
+    year: 'Present',
+    title: '80% Market Share',
+    description: 'ATT and its associates now enjoy about 80% of the total market share in their core business sectors.'
+  }
+]
 
 const board = [
   {

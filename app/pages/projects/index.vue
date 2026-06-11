@@ -16,8 +16,8 @@
             :class="[
               'px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200',
               activeCategory === cat.key
-                ? 'bg-primary-700 text-white shadow-lg'
-                : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-300 hover:text-blue-600',
+                ? 'bg-primary-900 text-white shadow-lg border-primary-900'
+                : 'bg-white text-slate-600 border border-slate-200 hover:border-accent-500 hover:text-primary-900',
             ]"
             @click="activeCategory = cat.key"
           >
@@ -34,30 +34,35 @@
             v-for="project in filteredProjects"
             :key="project.slug"
             :to="`/projects/${project.slug}`"
-            class="group bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            class="group bg-white border border-slate-200 hover:border-primary-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative overflow-hidden"
           >
-            <!-- Color bar + icon -->
-            <div :class="['h-2 w-full bg-gradient-to-r', project.color]"></div>
-            <div class="p-6">
-              <div class="flex items-start justify-between mb-4">
-                <div :class="['w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center text-white shadow-md', project.color]">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
-                  </svg>
-                </div>
-                <span :class="['text-xs font-semibold px-3 py-1 rounded-full', categoryBadge(project.category)]">
+            <!-- Top industrial accent line -->
+            <div :class="['absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r z-10', project.color]"></div>
+            
+            <div class="h-48 w-full bg-slate-100 relative overflow-hidden">
+              <img :src="project.image || '/slider/hero_toll_collection.png'" :alt="project.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors"></div>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="mb-4">
+                <span :class="['text-[10px] font-black uppercase tracking-widest px-3 py-1.5 bg-slate-100 text-slate-800']">
                   {{ categoryLabel(project.category) }}
                 </span>
               </div>
-              <h3 class="font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors leading-snug">{{ project.title }}</h3>
-              <p class="text-sm text-slate-500 mb-4 leading-relaxed">{{ project.shortDesc }}</p>
-              <div class="flex items-center justify-between text-xs text-slate-400">
-                <span>{{ project.client }}</span>
-                <span class="font-semibold">{{ project.year }}</span>
-              </div>
-              <div class="flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-600 group-hover:gap-3 transition-all duration-200">
-                View project
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+              
+              <h3 class="text-lg font-black text-slate-900 mb-3 group-hover:text-primary-600 transition-colors uppercase tracking-wide leading-snug">{{ project.title }}</h3>
+              <p class="text-sm text-slate-600 mb-6 flex-1 leading-relaxed">{{ project.shortDesc }}</p>
+              
+              <div class="pt-5 border-t border-slate-100 flex flex-col gap-2">
+                <div class="flex items-start justify-between text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  <span>Client:</span>
+                  <span class="text-slate-900 text-right max-w-[60%] leading-tight">{{ project.client }}</span>
+                </div>
+                <div class="flex items-center justify-between text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                  <span>Year:</span>
+                  <span class="text-slate-900">{{ project.year }}</span>
+                </div>
               </div>
             </div>
           </NuxtLink>

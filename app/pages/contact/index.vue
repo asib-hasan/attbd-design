@@ -12,16 +12,11 @@
 
           <!-- Contact Info Cards -->
           <div class="space-y-5">
-            <div v-for="info in contactInfo" :key="info.label" class="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-              <div :class="['w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 bg-gradient-to-br', info.color]">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" :d="info.icon" />
-                </svg>
-              </div>
-              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">{{ info.label }}</div>
+            <div v-for="info in contactInfo" :key="info.label" :class="['bg-white border border-slate-200 border-l-4 p-8 shadow-sm hover:shadow-md transition-shadow', info.color]">
+              <div class="text-xs font-black text-slate-900 uppercase tracking-widest mb-4">{{ info.label }}</div>
               <div v-for="line in info.lines" :key="line">
-                <a v-if="info.href" :href="`${info.href}${line}`" class="text-slate-800 font-medium hover:text-blue-600 transition-colors block text-sm">{{ line }}</a>
-                <p v-else class="text-slate-800 font-medium text-sm">{{ line }}</p>
+                <a v-if="info.href" :href="`${info.href}${line}`" class="text-slate-600 font-medium hover:text-accent-600 transition-colors block text-sm mb-1">{{ line }}</a>
+                <p v-else class="text-slate-600 font-medium text-sm mb-1">{{ line }}</p>
               </div>
             </div>
 
@@ -45,7 +40,7 @@
           <div class="lg:col-span-2">
             <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 md:p-10">
               <div class="mb-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100 mb-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-primary-900 text-xs font-semibold rounded-full border border-slate-200 mb-4">
                   Send us a Message
                 </div>
                 <h2 class="text-2xl font-bold text-slate-900 mb-2">How can we help you?</h2>
@@ -104,7 +99,7 @@
                 <button
                   type="submit"
                   :disabled="submitting"
-                  class="w-full sm:w-auto px-10 py-4 bg-primary-700 hover:bg-primary-600 disabled:opacity-60 text-white font-bold rounded-xl transition-all duration-200 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                  class="w-full sm:w-auto px-10 py-4 bg-accent-500 hover:bg-accent-600 disabled:opacity-60 text-primary-900 font-bold uppercase rounded-xl transition-all duration-200 hover:scale-105 shadow-lg shadow-accent-500/30 flex items-center justify-center gap-2"
                 >
                   <svg v-if="submitting" class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
                   {{ submitting ? 'Sending...' : 'Send Message' }}
@@ -151,22 +146,19 @@ async function submitForm() {
 const contactInfo = [
   {
     label: 'Phone',
-    icon: 'M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z',
-    color: 'from-blue-500 to-blue-700',
+    color: 'border-l-primary-600',
     href: 'tel:',
     lines: ['+88-2-8832313', '+88-2-8832240'],
   },
   {
     label: 'Email',
-    icon: 'M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75',
-    color: 'from-accent-500 to-orange-600',
+    color: 'border-l-accent-500',
     href: 'mailto:',
     lines: ['info@att-bd.com'],
   },
   {
     label: 'Office Address',
-    icon: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z',
-    color: 'from-green-500 to-emerald-700',
+    color: 'border-l-slate-800',
     href: null,
     lines: ['House #67, Road #27,', 'Gulshan Circle #1,', 'Dhaka-1212, Bangladesh'],
   },
@@ -195,9 +187,9 @@ const contactInfo = [
 }
 
 .form-input:focus {
-  border-color: #2563eb;
+  border-color: var(--color-accent-500);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
 }
 
 .form-input::placeholder {

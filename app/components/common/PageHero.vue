@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-gradient-to-br from-primary-900 via-primary-700 to-primary-600 py-6 md:py-8 overflow-hidden">
+  <section class="relative bg-primary-900 py-10 md:py-16 overflow-hidden">
     <!-- Grid pattern -->
     <div class="absolute inset-0 hero-grid opacity-20"></div>
 
@@ -24,7 +24,7 @@
         {{ label }}
       </div>
 
-      <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-3 max-w-3xl">
+      <h1 class="text-3xl md:text-5xl font-black uppercase text-white leading-tight mb-3 max-w-3xl">
         {{ title }}
       </h1>
       <p v-if="subtitle" class="text-lg text-white/60 max-w-2xl leading-relaxed">

@@ -6,28 +6,13 @@
       label="ITS Solutions"
     />
 
-    <section class="py-20 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Intro -->
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <p class="text-slate-600 leading-relaxed text-lg">
-            ITS (Intelligent Transportation Systems) is the use of advanced technology to enhance the operation of highway systems. The goal is to save lives, time, money, energy and the environment through computers, sensors, communications, and electronic devices.
-          </p>
-        </div>
-
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          <ItemCard
-            v-for="solution in solutions"
-            :key="solution.slug"
-            :to="'/solutions/toll-management'"
-            :title="solution.title"
-            :description="solution.shortDesc"
-            :icon="solution.icon"
-            :color="solution.color"
-          />
-        </div>
-      </div>
+    <section class="bg-white">
+      <AlternatingGrid 
+        title="Our Solutions" 
+        highlight="Explore" 
+        description="We offer end-to-end ITS solutions, from toll management to ship building and weighing infrastructure."
+        :items="formattedSolutions" 
+      />
     </section>
 
 
@@ -35,10 +20,31 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { solutions } from '~/data/solutions'
 
 useSeoMeta({
   title: 'Solutions — ATT | Intelligent Transportation Systems Bangladesh',
   description: 'Explore ATT\'s complete range of ITS solutions: toll collection, security, traffic monitoring, bridge safety, HTMS, customized software and more.',
+})
+
+const formattedSolutions = computed(() => {
+  return solutions.map((s, index) => {
+    // Provide a default image based on index if none exists
+    const defaultImages = [
+      '/slider/hero_traffic_system.png',
+      '/slider/hero_toll_collection.png',
+      '/slider/hero_access_security.png',
+    ]
+    const imgUrl = s.image || defaultImages[index % defaultImages.length]
+
+    return {
+      id: s.slug,
+      title: s.title,
+      description: s.description || s.shortDesc,
+      image: imgUrl,
+      features: s.features || (s as any).achievements || [],
+    }
+  })
 })
 </script>

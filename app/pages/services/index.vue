@@ -6,21 +6,13 @@
       label="Services"
     />
 
-    <section class="py-20 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ItemCard
-            v-for="service in services"
-            :key="service.slug"
-            :to="'/services/installation'"
-            :title="service.title"
-            :description="service.shortDesc"
-            :icon="service.icon"
-            :color="service.color"
-            cta="View service"
-          />
-        </div>
-      </div>
+    <section class="bg-white">
+      <AlternatingGrid 
+        title="Our Capabilities" 
+        highlight="Explore" 
+        description="We offer end-to-end solutions, from installation and maintenance to civil construction and marine logistics."
+        :items="formattedServices" 
+      />
     </section>
 
 
@@ -28,10 +20,31 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { services } from '~/data/services'
 
 useSeoMeta({
   title: 'Services — ATT | Installation, Maintenance & Consultancy',
   description: 'ATT provides professional ITS installation, preventive maintenance, expert consultancy, and marine shipping services across Bangladesh.',
+})
+
+const formattedServices = computed(() => {
+  return services.map((s, index) => {
+    // Provide a default image based on index if none exists
+    const defaultImages = [
+      '/slider/hero_traffic_system.png',
+      '/slider/hero_toll_collection.png',
+      '/slider/hero_access_security.png',
+    ]
+    const imgUrl = s.image || defaultImages[index % defaultImages.length]
+
+    return {
+      id: s.slug,
+      title: s.title,
+      description: s.description || s.shortDesc,
+      image: imgUrl,
+      features: s.highlights || [],
+    }
+  })
 })
 </script>
