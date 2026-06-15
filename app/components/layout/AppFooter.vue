@@ -49,15 +49,13 @@
           </ul>
         </div>
 
-        <!-- Column 4: Short Links -->
+        <!-- Column 4: Quick Links -->
         <div class="lg:border-r lg:border-dashed lg:border-white/30 px-4">
-          <h3 class="text-white font-bold mb-6">Short Links</h3>
+          <h3 class="text-white font-bold mb-6">Quick Links</h3>
           <ul class="space-y-4">
-            <li><NuxtLink to="/career" class="footer-link">Career</NuxtLink></li>
             <li><NuxtLink to="/contact" class="footer-link">Contact Us</NuxtLink></li>
             <li><NuxtLink to="/blogs" class="footer-link">News & Events</NuxtLink></li>
-            <li><NuxtLink to="/about" class="footer-link">Testimonials</NuxtLink></li>
-            <li><NuxtLink to="/projects" class="footer-link">Media Content</NuxtLink></li>
+            <li><NuxtLink to="/projects" class="footer-link">Our Projects</NuxtLink></li>
           </ul>
         </div>
 
