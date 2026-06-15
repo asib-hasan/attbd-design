@@ -55,7 +55,7 @@
           <NuxtLink to="/contact" :class="navLinkClass" active-class="!text-accent-500">Contact Us</NuxtLink>
 
           <!-- Search Icon Button -->
-          <button class="ml-2 w-9 h-9 rounded-full bg-primary-700 text-white flex items-center justify-center hover:bg-primary-800 transition-colors shadow-sm">
+          <button @click="isSearchModalOpen = true" class="ml-2 w-9 h-9 rounded-full bg-primary-700 text-white flex items-center justify-center hover:bg-primary-800 transition-colors shadow-sm">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
             </svg>
@@ -92,6 +92,33 @@
         </div>
       </div>
     </Transition>
+
+    <!-- Search Modal -->
+    <Transition name="fade">
+      <div v-if="isSearchModalOpen" class="fixed inset-0 z-[100] flex items-start justify-center pt-24 bg-slate-900/50 backdrop-blur-sm" @click="isSearchModalOpen = false">
+        <div class="bg-white w-full max-w-2xl mx-4 rounded-2xl shadow-2xl overflow-hidden" @click.stop>
+          <div class="p-4 border-b border-slate-100 flex items-center gap-3">
+            <svg class="w-6 h-6 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+            </svg>
+            <input 
+              type="text" 
+              placeholder="Search products, services, solutions..." 
+              class="w-full text-lg outline-none text-slate-700 bg-transparent placeholder-slate-400"
+              autofocus
+            />
+            <button @click="isSearchModalOpen = false" class="p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 bg-slate-50 text-center">
+            <p class="text-sm text-slate-500">Press Enter to search</p>
+          </div>
+        </div>
+      </div>
+    </Transition>
   </header>
 </template>
 
@@ -102,6 +129,7 @@ import { services } from '~/data/services'
 
 const activeDropdown = ref<string | null>(null)
 const mobileOpen = ref(false)
+const isSearchModalOpen = ref(false)
 
 let closeTimer: ReturnType<typeof setTimeout> | null = null
 
@@ -138,6 +166,15 @@ const projectsLinks = [
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .dropdown-item {
   display: block;
   padding: 0.5rem 1rem;

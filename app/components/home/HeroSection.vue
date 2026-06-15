@@ -16,7 +16,10 @@
         <div class="absolute inset-0 z-0">
           <img v-if="slide.image" :src="slide.image" class="absolute inset-0 w-full h-full object-cover" :alt="slide.title" />
           <!-- Dark overlay for text readability -->
-          <div class="absolute inset-0 bg-black/50"></div>
+          <div class="absolute inset-0 bg-black/80"></div>
+          
+          <!-- Tech Animation Background -->
+          <TechHeroAnimation />
         </div>
 
         <!-- Content -->
@@ -73,6 +76,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import TechHeroAnimation from './TechHeroAnimation.vue'
 
 const slides = [
   {
