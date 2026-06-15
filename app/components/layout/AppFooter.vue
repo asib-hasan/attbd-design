@@ -103,7 +103,10 @@
         </NuxtLink>
 
         <!-- Copyright Right -->
-        <p>© {{ currentYear }}, All Rights Reserved</p>
+        <div class="flex flex-col md:items-end gap-1">
+          <p>© {{ currentYear }}, All Rights Reserved</p>
+          <p class="text-white/70 text-xs mt-1">Developed By <a href="https://creativetechpark.com/" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:underline cursor-pointer">Creative Tech Park</a></p>
+        </div>
       </div>
     </div>
   </footer>
