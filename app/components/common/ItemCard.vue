@@ -1,16 +1,17 @@
 <template>
   <NuxtLink
     :to="to"
-    class="group relative flex flex-col bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300"
+    class="group relative flex flex-col bg-slate-50 rounded-[30px] border border-slate-100 mt-6 overflow-visible hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1.5 transition-all duration-300"
   >
     <!-- Top color bar -->
-    <div :class="['h-1.5 w-full bg-gradient-to-r', color]"></div>
+    <div :class="['absolute top-0 inset-x-0 h-1.5 w-full bg-gradient-to-r rounded-t-[30px]', color]"></div>
 
-    <div class="p-6 flex flex-col flex-1">
-      <!-- Icon -->
-      <div :class="['w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gradient-to-br text-white shadow-lg', color]">
-        <component :is="iconComponent" :size="24" />
-      </div>
+    <!-- Floating Icon -->
+    <div :class="['absolute -top-6 left-6 w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br text-white shadow-lg border-4 border-slate-50 group-hover:scale-110 transition-transform z-10', color]">
+      <component :is="iconComponent" :size="24" />
+    </div>
+
+    <div class="p-6 pt-12 flex flex-col flex-1">
 
       <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-700 transition-colors leading-snug">
         {{ title }}

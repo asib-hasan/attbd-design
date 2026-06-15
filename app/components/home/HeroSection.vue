@@ -31,14 +31,7 @@
               {{ slide.description }}
             </p>
             
-            <div class="flex flex-wrap gap-4 animate-fade-up delay-300">
-              <NuxtLink
-                :to="slide.secondaryLink"
-                class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-900 font-bold uppercase tracking-wider rounded-none transition-colors flex items-center gap-2"
-              >
-                {{ slide.secondaryLabel }}
-              </NuxtLink>
-            </div>
+
           </div>
         </div>
       </div>

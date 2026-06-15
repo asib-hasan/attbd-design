@@ -3,7 +3,8 @@
     <div 
       v-for="(item, index) in items" 
       :key="index"
-      class="border border-slate-200 bg-white transition-all duration-300 overflow-hidden"
+      v-animate="`animate-fade-up delay-${(index + 1) * 100}`"
+      class="border border-slate-200 bg-white transition-all duration-300 overflow-hidden rounded-xl"
       :class="{ 'border-l-4 border-l-accent-500 shadow-md': activeIndex === index, 'border-l-4 border-l-transparent': activeIndex !== index }"
     >
       <button 

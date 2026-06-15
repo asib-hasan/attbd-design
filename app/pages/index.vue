@@ -10,6 +10,10 @@
       :items="sectors" 
     />
 
+    <StatsSection />
+
+    <TestimonialsSection />
+
     <BlogSection />
     <ClientsSection />
 

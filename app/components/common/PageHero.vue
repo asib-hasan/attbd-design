@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-primary-900 py-10 md:py-16 overflow-hidden">
+  <section class="relative bg-primary-700 py-10 md:py-16 overflow-hidden">
     <!-- Grid pattern -->
     <div class="absolute inset-0 hero-grid opacity-20"></div>
 

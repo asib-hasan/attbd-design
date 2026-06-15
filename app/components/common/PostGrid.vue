@@ -8,7 +8,7 @@
         <div class="lg:w-3/4 space-y-12">
           
           <!-- Highlighted/Featured Post -->
-          <div v-if="featuredPost" class="bg-white rounded overflow-hidden shadow-sm border border-slate-200 group">
+          <div v-if="featuredPost" v-animate="'animate-fade-up'" class="bg-white rounded-[30px] overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 group">
             <div class="relative h-64 md:h-96 overflow-hidden bg-slate-200">
               <img :src="featuredPost.image" :alt="featuredPost.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute top-4 left-4 bg-accent-500 text-primary-900 text-xs font-bold uppercase px-3 py-1">
@@ -37,7 +37,7 @@
 
           <!-- Regular Posts Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div v-for="post in posts" :key="post.id" class="bg-white rounded overflow-hidden shadow-sm border border-slate-200 group flex flex-col">
+            <div v-for="(post, index) in posts" :key="post.id" v-animate="`animate-fade-up delay-${(index + 1) * 100}`" class="bg-white rounded-[30px] overflow-hidden shadow-lg border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col">
               <div class="relative h-48 overflow-hidden bg-slate-200">
                 <img :src="post.image" :alt="post.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
@@ -62,9 +62,9 @@
         <!-- Sidebar -->
         <aside class="lg:w-1/4 space-y-8">
           <!-- Search -->
-          <div class="bg-white p-6 border border-slate-200 rounded">
-            <h3 class="text-lg font-bold text-primary-900 uppercase mb-4 flex items-center gap-2">
-              <span class="w-1 h-5 bg-accent-500"></span>
+          <div v-animate="'animate-fade-up delay-200'" class="bg-white p-8 border border-slate-100 rounded-[20px] shadow-lg shadow-slate-200/50">
+            <h3 class="text-xl font-bold text-primary-900 uppercase mb-5 flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-accent-500 rounded-full"></span>
               Search
             </h3>
             <div class="relative">
@@ -76,9 +76,9 @@
           </div>
 
           <!-- Categories -->
-          <div class="bg-white p-6 border border-slate-200 rounded">
-            <h3 class="text-lg font-bold text-primary-900 uppercase mb-4 flex items-center gap-2">
-              <span class="w-1 h-5 bg-accent-500"></span>
+          <div v-animate="'animate-fade-up delay-300'" class="bg-white p-8 border border-slate-100 rounded-[20px] shadow-lg shadow-slate-200/50">
+            <h3 class="text-xl font-bold text-primary-900 uppercase mb-5 flex items-center gap-3">
+              <span class="w-1.5 h-6 bg-accent-500 rounded-full"></span>
               Categories
             </h3>
             <ul class="space-y-2">

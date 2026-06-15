@@ -4,11 +4,11 @@
       
       <!-- Section Header -->
       <div v-if="title || description" class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-black text-primary-900 uppercase tracking-tight mb-4">
+        <h2 v-animate="'animate-fade-up'" class="text-3xl md:text-5xl font-black text-primary-900 uppercase tracking-tight mb-4">
           <span v-if="highlight" class="text-accent-500">{{ highlight }}</span>
           {{ title }}
         </h2>
-        <p v-if="description" class="text-lg text-slate-600 max-w-3xl mx-auto">
+        <p v-if="description" v-animate="'animate-fade-up delay-100'" class="text-lg text-slate-600 max-w-3xl mx-auto">
           {{ description }}
         </p>
       </div>
@@ -23,7 +23,7 @@
           :class="{'md:flex-row-reverse': index % 2 !== 0}"
         >
           <!-- Image Container -->
-          <div class="w-full md:w-1/2 relative group overflow-hidden border-4 border-white shadow-xl">
+          <div v-animate="index % 2 !== 0 ? 'animate-slide-left' : 'animate-fade-up'" class="w-full md:w-1/2 relative group overflow-hidden border-4 border-white shadow-2xl shadow-slate-300/50 rounded-[30px]">
             <div class="absolute inset-0 bg-primary-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             <img 
               :src="item.image" 
@@ -39,8 +39,8 @@
           </div>
 
           <!-- Content Container -->
-          <div class="w-full md:w-1/2 flex flex-col justify-center">
-            <div class="border-l-4 border-accent-500 pl-6 mb-6">
+          <div v-animate="index % 2 === 0 ? 'animate-slide-left' : 'animate-fade-up'" class="w-full md:w-1/2 flex flex-col justify-center">
+            <div class="border-l-[6px] border-accent-500 pl-6 mb-6">
               <h3 class="text-2xl md:text-4xl font-bold text-primary-900 uppercase tracking-tight mb-4">
                 {{ item.title }}
               </h3>

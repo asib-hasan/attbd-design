@@ -5,12 +5,15 @@
         <!-- Left: Stats -->
         <div class="grid grid-cols-2 gap-6">
           <div
-            v-for="stat in stats"
+            v-for="(stat, index) in stats"
             :key="stat.label"
+            v-animate="`animate-fade-up delay-${index * 100}`"
             :class="['rounded-2xl p-8 text-center relative overflow-hidden', stat.bg]"
           >
             <div class="absolute inset-0 opacity-5 hero-grid"></div>
-            <div :class="['text-4xl md:text-5xl font-black mb-2', stat.textColor]">{{ stat.value }}</div>
+            <div :class="['text-4xl md:text-5xl font-black mb-2', stat.textColor]">
+              <AnimatedCounter :value="stat.value" :suffix="stat.suffix" />
+            </div>
             <div class="text-sm font-semibold text-slate-600">{{ stat.label }}</div>
             <div class="text-xs text-slate-400 mt-1">{{ stat.sub }}</div>
           </div>
@@ -18,19 +21,19 @@
 
         <!-- Right: Why ATT -->
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-50 text-accent-600 text-xs font-semibold rounded-full border border-accent-200 mb-5">
+          <div v-animate="'animate-fade-up'" class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-50 text-accent-600 text-xs font-semibold rounded-full border border-accent-200 mb-5">
             Why Choose ATT
           </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 v-animate="'animate-fade-up delay-100'" class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             The Trusted Partner for Bangladesh's Infrastructure
           </h2>
-          <p class="text-slate-500 leading-relaxed mb-8">
+          <p v-animate="'animate-fade-up delay-200'" class="text-slate-500 leading-relaxed mb-8">
             With over 25 years of experience, ATT combines deep local knowledge with world-class technology partnerships to deliver ITS solutions that work reliably in Bangladesh's challenging environment.
           </p>
 
           <div class="space-y-4">
-            <div v-for="point in points" :key="point.title" class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div v-for="(point, index) in points" :key="point.title" v-animate="`animate-fade-up delay-${(index + 3) * 100}`" class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
                 <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" :d="point.icon" />
                 </svg>
@@ -48,11 +51,13 @@
 </template>
 
 <script setup lang="ts">
+import AnimatedCounter from '../common/AnimatedCounter.vue'
+
 const stats = [
-  { value: '25+', label: 'Years Experience', sub: 'Since 1999', bg: 'bg-blue-50', textColor: 'text-blue-700' },
-  { value: '100+', label: 'Projects Delivered', sub: 'Nationwide', bg: 'bg-accent-50', textColor: 'text-accent-600' },
-  { value: '50+', label: 'Clients Served', sub: 'Govt & Private', bg: 'bg-green-50', textColor: 'text-green-700' },
-  { value: '8', label: 'Core Solutions', sub: 'ITS Domains', bg: 'bg-purple-50', textColor: 'text-purple-700' },
+  { value: 25, suffix: '+', label: 'Years Experience', sub: 'Since 1999', bg: 'bg-blue-50', textColor: 'text-blue-700' },
+  { value: 100, suffix: '+', label: 'Projects Delivered', sub: 'Nationwide', bg: 'bg-accent-50', textColor: 'text-accent-600' },
+  { value: 50, suffix: '+', label: 'Clients Served', sub: 'Govt & Private', bg: 'bg-green-50', textColor: 'text-green-700' },
+  { value: 8, suffix: '', label: 'Core Solutions', sub: 'ITS Domains', bg: 'bg-purple-50', textColor: 'text-purple-700' },
 ]
 
 const points = [
