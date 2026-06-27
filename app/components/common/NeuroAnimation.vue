@@ -82,18 +82,20 @@ const animate = () => {
   ctx.clearRect(0, 0, width, height)
 
   for (let i = 0; i < particles.length; i++) {
-    particles[i].update()
-    particles[i].draw(ctx)
+    const p1 = particles[i]!
+    p1.update()
+    p1.draw(ctx)
 
     for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x
-      const dy = particles[i].y - particles[j].y
+      const p2 = particles[j]!
+      const dx = p1.x - p2.x
+      const dy = p1.y - p2.y
       const distance = Math.sqrt(dx * dx + dy * dy)
 
       if (distance < 120) {
         ctx.beginPath()
-        ctx.moveTo(particles[i].x, particles[i].y)
-        ctx.lineTo(particles[j].x, particles[j].y)
+        ctx.moveTo(p1.x, p1.y)
+        ctx.lineTo(p2.x, p2.y)
         ctx.strokeStyle = `rgba(59, 130, 246, ${(1 - distance / 120) * 0.5})` // Fade lines based on distance
         ctx.lineWidth = 1
         ctx.stroke()
