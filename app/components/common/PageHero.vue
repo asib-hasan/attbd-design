@@ -10,6 +10,9 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
     </div>
 
+    <!-- Neuro Animation Background -->
+    <NeuroAnimation />
+
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-sm text-slate-400 mb-6 font-medium">
@@ -45,6 +48,8 @@
 </template>
 
 <script setup lang="ts">
+import NeuroAnimation from './NeuroAnimation.vue'
+
 defineProps<{
   title: string
   subtitle?: string
