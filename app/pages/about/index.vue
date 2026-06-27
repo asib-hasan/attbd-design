@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#f8f9fa] min-h-screen font-sans">
     <PageHero
-      title="About Asian Traffic Technologies"
+      title="About Us"
       subtitle="Bangladesh's leading Intelligent Transportation Systems provider — over 25 years of excellence in toll collection, traffic monitoring, and infrastructure technology."
     />
 
