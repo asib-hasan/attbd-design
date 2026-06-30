@@ -6,7 +6,7 @@
       label="ITS Solutions"
     />
 
-    <section class="bg-white">
+    <section class="bg-slate-950">
       <AlternatingGrid 
         title="Our Solutions" 
         highlight="Explore" 

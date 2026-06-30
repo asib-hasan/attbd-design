@@ -19,8 +19,8 @@ html {
 
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  color: #1e293b;
-  background: #ffffff;
+  color: #f8fafc;
+  background: #020617; /* slate-950 */
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-slate-900 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <!-- Left: Stats -->
@@ -8,39 +8,40 @@
             v-for="(stat, index) in stats"
             :key="stat.label"
             v-animate="`animate-fade-up delay-${index * 100}`"
-            :class="['rounded-2xl p-8 text-center relative overflow-hidden', stat.bg]"
+            class="bg-slate-950/50 backdrop-blur-sm border border-white/5 rounded-2xl p-8 text-center relative overflow-hidden group hover:bg-slate-800 transition-colors duration-500"
           >
-            <div class="absolute inset-0 opacity-5 hero-grid"></div>
-            <div :class="['text-4xl md:text-5xl font-black mb-2', stat.textColor]">
+            <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="text-5xl font-black mb-3 text-white">
               <AnimatedCounter :value="stat.value" :suffix="stat.suffix" />
             </div>
-            <div class="text-sm font-semibold text-slate-600">{{ stat.label }}</div>
-            <div class="text-xs text-slate-400 mt-1">{{ stat.sub }}</div>
+            <div class="text-sm font-bold text-accent-500 uppercase tracking-widest">{{ stat.label }}</div>
+            <div class="text-xs text-slate-500 mt-2">{{ stat.sub }}</div>
           </div>
         </div>
 
         <!-- Right: Why ATT -->
         <div>
-          <div v-animate="'animate-fade-up'" class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-50 text-accent-600 text-xs font-semibold rounded-full border border-accent-200 mb-5">
-            Why Choose ATT
+          <div v-animate="'animate-fade-up'" class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6">
+            <span class="w-2 h-2 rounded-full bg-accent-500"></span>
+            <span class="text-slate-300 text-xs font-bold uppercase tracking-wider">Why Choose ATT</span>
           </div>
-          <h2 v-animate="'animate-fade-up delay-100'" class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-            The Trusted Partner for Bangladesh's Infrastructure
+          <h2 v-animate="'animate-fade-up delay-100'" class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+            The Trusted Partner for <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-blue-400">Infrastructure</span>
           </h2>
-          <p v-animate="'animate-fade-up delay-200'" class="text-slate-500 leading-relaxed mb-8">
+          <p v-animate="'animate-fade-up delay-200'" class="text-slate-400 text-lg leading-relaxed mb-10">
             With over 25 years of experience, ATT combines deep local knowledge with world-class technology partnerships to deliver ITS solutions that work reliably in Bangladesh's challenging environment.
           </p>
 
-          <div class="space-y-4">
-            <div v-for="(point, index) in points" :key="point.title" v-animate="`animate-fade-up delay-${(index + 3) * 100}`" class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 shadow-sm border border-blue-100">
-                <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <div class="space-y-6">
+            <div v-for="(point, index) in points" :key="point.title" v-animate="`animate-fade-up delay-${(index + 3) * 100}`" class="flex items-start gap-5 group">
+              <div class="w-12 h-12 rounded-xl bg-slate-950 flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:border-accent-500/50 transition-colors">
+                <svg class="w-6 h-6 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" :d="point.icon" />
                 </svg>
               </div>
               <div>
-                <div class="font-semibold text-slate-900 mb-0.5">{{ point.title }}</div>
-                <div class="text-sm text-slate-500">{{ point.text }}</div>
+                <div class="font-bold text-lg text-white mb-1 group-hover:text-accent-400 transition-colors">{{ point.title }}</div>
+                <div class="text-base text-slate-500 leading-relaxed">{{ point.text }}</div>
               </div>
             </div>
           </div>
@@ -54,10 +55,10 @@
 import AnimatedCounter from '../common/AnimatedCounter.vue'
 
 const stats = [
-  { value: 25, suffix: '+', label: 'Years Experience', sub: 'Since 1999', bg: 'bg-blue-50', textColor: 'text-blue-700' },
-  { value: 100, suffix: '+', label: 'Projects Delivered', sub: 'Nationwide', bg: 'bg-accent-50', textColor: 'text-accent-600' },
-  { value: 50, suffix: '+', label: 'Clients Served', sub: 'Govt & Private', bg: 'bg-green-50', textColor: 'text-green-700' },
-  { value: 8, suffix: '', label: 'Core Solutions', sub: 'ITS Domains', bg: 'bg-purple-50', textColor: 'text-purple-700' },
+  { value: 25, suffix: '+', label: 'Years Experience', sub: 'Since 1999' },
+  { value: 100, suffix: '+', label: 'Projects Delivered', sub: 'Nationwide' },
+  { value: 50, suffix: '+', label: 'Clients Served', sub: 'Govt & Private' },
+  { value: 8, suffix: '', label: 'Core Solutions', sub: 'ITS Domains' },
 ]
 
 const points = [

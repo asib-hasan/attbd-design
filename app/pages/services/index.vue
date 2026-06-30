@@ -6,7 +6,7 @@
       label="Services"
     />
 
-    <section class="bg-white">
+    <section class="bg-slate-950">
       <AlternatingGrid 
         title="Our Capabilities" 
         highlight="Explore" 
