@@ -1,29 +1,26 @@
 <template>
   <section class="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden bg-slate-950">
     <!-- Video Background -->
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-0 bg-slate-950">
       <video 
         autoplay 
         loop 
         muted 
         playsinline 
-        class="absolute inset-0 w-full h-full object-cover opacity-80"
+        class="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/Video/video1.mp4" type="video/mp4" />
       </video>
       
-      <!-- Gradient Overlay for readability and dark theme integration -->
-      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+      <!-- Lighter Gradient Overlay to let the video shine through -->
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent pointer-events-none"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-10 w-full h-full flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
       <div class="max-w-4xl">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-500/10 border border-accent-500/20 text-accent-400 text-sm font-semibold mb-6 animate-fade-up">
-          <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-          Bangladesh's Leading Infrastructure Provider
-        </div>
+
         
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 animate-fade-up delay-100">
           Transforming<br />
@@ -50,13 +47,7 @@
       </div>
     </div>
     
-    <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
-      <span class="text-xs text-slate-400 font-medium tracking-widest uppercase">Scroll</span>
-      <svg class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
-    </div>
+
   </section>
 </template>
 

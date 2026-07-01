@@ -50,7 +50,7 @@
         <!-- Column 5: Brand & Social -->
         <div class="col-span-2 lg:col-span-1">
           <NuxtLink to="/" class="inline-block mb-6">
-            <img src="/logo.png" alt="ATT Logo" class="h-10 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
+            <img src="/logo.png" alt="ATT Logo" class="h-14 lg:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity" />
           </NuxtLink>
           <p class="text-xs leading-relaxed mb-6">
             Asian Traffic Technologies Ltd. Providing end-to-end infrastructure solutions for a modern Bangladesh.

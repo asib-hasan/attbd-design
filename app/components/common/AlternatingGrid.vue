@@ -1,74 +1,67 @@
 <template>
-  <div class="py-24 bg-slate-950">
+  <div class="py-20 md:py-32 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div v-if="title || description" class="text-center mb-24">
-        <h2 v-animate="'animate-fade-up'" class="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-6">
-          <span v-if="highlight" class="text-accent-500 mr-2">{{ highlight }}</span>{{ title }}
+      <div v-if="title || description" class="text-center max-w-3xl mx-auto mb-20 md:mb-32">
+        <h2 v-animate="'animate-fade-up'" class="text-3xl md:text-5xl font-bold text-white mb-6">
+          <span v-if="highlight" class="text-blue-500">{{ highlight }}</span>
+          {{ title }}
         </h2>
-        <p v-if="description" v-animate="'animate-fade-up delay-100'" class="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+        <p v-if="description" v-animate="'animate-fade-up delay-100'" class="text-lg md:text-xl text-slate-400 leading-relaxed">
           {{ description }}
         </p>
       </div>
 
       <!-- Grid Items -->
-      <div class="space-y-24 md:space-y-32">
+      <div class="space-y-24 md:space-y-40">
         <div 
           v-for="(item, index) in items" 
           :key="index"
           :id="item.id"
-          class="flex flex-col md:flex-row gap-12 lg:gap-20 items-center scroll-mt-32"
+          class="flex flex-col md:flex-row items-center gap-12 lg:gap-20"
           :class="{'md:flex-row-reverse': index % 2 !== 0}"
         >
-          <!-- Image Container -->
-          <div v-animate="index % 2 !== 0 ? 'animate-slide-left' : 'animate-fade-up'" class="w-full md:w-1/2 relative group overflow-hidden border border-white/10 shadow-2xl rounded-3xl">
-            <!-- Dark Overlay that fades on hover -->
-            <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/10 transition-colors duration-700 z-10"></div>
-            <img 
-              :src="item.image" 
-              :alt="item.title"
-              class="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110"
-            />
-            <!-- Accent Corner -->
-            <div class="absolute bottom-0 right-0 w-16 h-16 bg-white/10 backdrop-blur-md border-t border-l border-white/20 z-20 flex items-center justify-center text-accent-500 group-hover:bg-accent-500 group-hover:text-slate-900 transition-all duration-300 rounded-tl-3xl">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-              </svg>
+          <!-- Image -->
+          <div v-animate="index % 2 !== 0 ? 'animate-slide-left' : 'animate-fade-up'" class="w-full md:w-1/2">
+            <div class="rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl">
+              <img 
+                :src="item.image" 
+                :alt="item.title"
+                class="w-full h-[350px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+              />
             </div>
           </div>
 
-          <!-- Content Container -->
+          <!-- Content -->
           <div v-animate="index % 2 === 0 ? 'animate-slide-left' : 'animate-fade-up'" class="w-full md:w-1/2 flex flex-col justify-center">
-            <div class="border-l-[4px] border-accent-500 pl-6 mb-8">
-              <h3 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
-                {{ item.title }}
-              </h3>
-              <p class="text-slate-400 text-lg leading-relaxed">
-                {{ item.description }}
-              </p>
-            </div>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              {{ item.title }}
+            </h3>
             
-            <ul v-if="item.features" class="space-y-4 mb-10">
+            <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+              {{ item.description }}
+            </p>
+            
+            <ul v-if="item.features && item.features.length" class="space-y-5 mb-10">
               <li v-for="(feature, fIndex) in item.features" :key="fIndex" class="flex items-start gap-4">
-                <div class="mt-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-3.5 h-3.5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span class="text-slate-300 text-base">{{ feature }}</span>
+                <span class="text-slate-300 text-lg">{{ feature }}</span>
               </li>
             </ul>
 
-            <div>
+            <div v-if="item.link">
               <NuxtLink 
-                v-if="item.link" 
                 :to="item.link"
-                class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 text-white font-bold uppercase tracking-wider rounded-full transition-all duration-300 group/btn"
+                class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-500 transition-colors duration-300 shadow-lg shadow-blue-900/20 group"
               >
                 {{ item.linkLabel || 'Learn More' }}
-                <svg class="w-5 h-5 text-accent-500 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </NuxtLink>
             </div>

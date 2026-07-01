@@ -140,14 +140,36 @@
           <div class="w-24 h-1 bg-accent-500 mx-auto rounded-full"></div>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-          <div v-for="(member, idx) in board" :key="member.name" class="group animate-fade-up" :class="`delay-${(idx + 1) * 100}`">
-            <div class="w-56 h-56 mx-auto rounded-full overflow-hidden mb-8 shadow-2xl ring-4 ring-slate-800 group-hover:ring-white/20 transition-all duration-500 transform group-hover:-translate-y-4">
-              <img :src="`/People_images/${member.image}`" :alt="member.name" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" />
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-24 text-center mt-16 pb-8">
+          <div v-for="(member, idx) in board" :key="member.name" class="group animate-fade-up h-full" :class="`delay-${(idx + 1) * 100}`">
+            
+            <!-- Card Container -->
+            <div class="bg-slate-900/50 backdrop-blur-sm rounded-[2rem] p-6 pt-0 flex flex-col items-center h-full border border-white/5 hover:border-blue-500/30 hover:bg-slate-800/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-900/20">
+              
+              <!-- Protruding Image -->
+              <div class="w-48 h-56 -mt-12 mb-6 rounded-2xl overflow-hidden shadow-2xl relative z-10 group-hover:-translate-y-3 transition-all duration-500 ring-4 ring-slate-950 group-hover:ring-slate-900">
+                <img :src="`/People_images/${member.image}`" :alt="member.name" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" />
+              </div>
+              
+              <!-- Content -->
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{{ member.name }}</h3>
+              <div class="text-accent-500 font-bold uppercase tracking-widest text-xs mb-4">{{ member.title }}</div>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{{ member.bio }}</p>
+              
+              <!-- Social Links -->
+              <div class="flex gap-3 justify-center mt-auto pb-2">
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-800 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+              </div>
             </div>
-            <h3 class="text-2xl font-black text-white mb-2">{{ member.name }}</h3>
-            <div class="text-accent-500 font-bold uppercase tracking-widest text-xs mb-5">{{ member.title }}</div>
-            <p class="text-slate-400 leading-relaxed text-sm">{{ member.bio }}</p>
+            
           </div>
         </div>
       </div>

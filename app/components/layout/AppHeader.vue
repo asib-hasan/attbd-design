@@ -6,7 +6,7 @@
 
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-4 flex-shrink-0 group z-20">
-          <img src="/logo.png" alt="ATT Logo" class="h-8 lg:h-10 w-auto brightness-0 invert opacity-100 transition-opacity" />
+          <img src="/logo.png" alt="ATT Logo" class="h-12 lg:h-16 w-auto opacity-100 transition-opacity" />
           <div class="hidden sm:block">
             <div class="font-black text-lg leading-tight text-white tracking-tight">
               ATT
