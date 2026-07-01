@@ -208,16 +208,16 @@ const board = [
     bio: 'M.B.B.S in Dhaka National Medical College. Key person in PR and Finance, ensuring operational health.',
   },
   {
-    name: 'Md. Masood Karim',
-    image: 'masood_karim.PNG',
-    title: 'Chief Executive Officer',
-    bio: 'M.B.A from University of Technology, Sydney. With ATT since 2002, managing teams locally and internationally.',
+    name: 'Shams Kader',
+    image: 'shams_kader.PNG',
+    title: 'Director',
+    bio: 'Maintaining on-site operations of the construction sector with dedication, technical knowledge, and a focus on safety.',
   },
   {
-    name: 'Md. Shafat K. Siddiky',
-    image: 'shafat.PNG',
-    title: 'Business Development',
-    bio: 'MBA from UK. Joined ATT in 2006, managing the company\'s overall business development issues.',
+    name: 'Nafisa Nahar',
+    image: 'nafisa_nahar.PNG',
+    title: 'Director',
+    bio: 'Overseeing maritime operations with efficiency, precision, and strong leadership.',
   },
 ]
 </script>
