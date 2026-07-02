@@ -3,7 +3,7 @@
     <HeroSection />
     <VisualVibeSection />
     <FocusAreasSection />
-    <MissionSection />
+    <OurWorkSection />
 
     <TestimonialsSection />
 

@@ -4,10 +4,9 @@
     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-10"></div>
     
     <!-- Image Area -->
-    <div class="h-64 bg-slate-950/50 flex items-center justify-center p-8 overflow-hidden relative border-b border-white/5">
-      <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-colors duration-500 z-0"></div>
-      <!-- Invert filter conditionally applied if product images are mostly dark/black logos. Adjust if they are full-color photos. -->
-      <img :src="image" :alt="title" class="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 ease-out drop-shadow-2xl" />
+    <div class="h-64 bg-slate-950/50 overflow-hidden relative border-b border-white/5">
+      <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-transparent transition-colors duration-500 z-20 pointer-events-none"></div>
+      <img :src="image" :alt="title" class="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-700 ease-out" />
     </div>
 
     <!-- Content Area -->
