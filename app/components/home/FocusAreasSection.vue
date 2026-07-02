@@ -13,7 +13,7 @@
     <!-- Banner 1: Toll Management -->
     <div class="relative w-full h-[600px] lg:h-[700px] mb-8 overflow-hidden group">
       <div class="absolute inset-0">
-        <img src="/slider/hero_toll_collection.png" alt="Toll Management" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/slider/bd_toll_plaza.png" alt="Toll Management" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from left to right -->
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
@@ -43,7 +43,7 @@
     <!-- Banner 2: Civil Construction -->
     <div class="relative w-full h-[600px] lg:h-[700px] mb-8 overflow-hidden group">
       <div class="absolute inset-0">
-        <img src="/slider/hero_traffic_system.png" alt="Civil Construction" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/slider/bd_heavy_engineering.png" alt="Civil Construction" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from right to left -->
       <div class="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent"></div>

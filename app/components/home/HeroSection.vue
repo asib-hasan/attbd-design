@@ -23,9 +23,9 @@
 
         
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 animate-fade-up delay-100">
-          Transforming<br />
+          ASIAN TRAFFIC<br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-slate-500">
-            Nations.
+            TECHNOLOGIES
           </span>
         </h1>
         
