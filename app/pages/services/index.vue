@@ -4,6 +4,7 @@
       title="Our Services"
       subtitle="Professional installation, maintenance, consultancy, and shipping services — delivering complete lifecycle support for your infrastructure investments."
       label="Services"
+      bgImage="/slider/photorealistic_toll_system.png"
     />
 
     <section class="bg-slate-950">

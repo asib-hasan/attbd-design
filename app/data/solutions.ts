@@ -15,13 +15,13 @@ export const solutions: Solution[] = [
   {
     id: 1,
     slug: 'toll-management',
+    image: '/slider/bd_realistic_toll_plaza.png',
     title: 'Toll Management & Operation',
     shortDesc: 'End-to-end electronic toll collection, management, and long-term operations.',
     description: `ATT is the market leader in Electronic Toll Collection (ETC) in Bangladesh. We supply, install, and maintain state-of-the-art toll equipment, including lane processing systems, plaza servers, and central monitoring software. With decades of experience operating major toll plazas like Nalka-Hatikamrul-Banpara and Khan Jahan Ali Bridge, we handle millions in toll revenues efficiently and transparently.`,
     icon: 'CreditCard',
     color: 'from-blue-600 to-blue-800',
-    image: '/smart_traffic_solution.png',
-    content: `
+        content: `
       <h3>Transforming Highway Operations</h3>
       <p>ATT is the undisputed market leader in <strong>Electronic Toll Collection (ETC)</strong> in Bangladesh. We design, deploy, and maintain state-of-the-art toll equipment, including lane processing systems, plaza servers, and central monitoring software.</p>
       <ul>
@@ -44,6 +44,7 @@ export const solutions: Solution[] = [
   {
     id: 2,
     slug: 'ship-building',
+    image: '/More/shams_navigation.png',
     title: 'Ship Building, Navigation & Rescue',
     shortDesc: 'Comprehensive marine services, fleet operation, and ship building.',
     description: `Through our maritime divisions—Mehboob & Masood Navigation, Shams Navigation, and Engineer Mehboob Ship Builders—we offer extensive ship operation, cargo carrier services, and ship building. We own and operate a large fleet of inland cargo vessels and oil tankers, transporting essential commodities across Bangladesh's waterways and internationally to India and Myanmar.`,
@@ -61,6 +62,7 @@ export const solutions: Solution[] = [
   {
     id: 3,
     slug: 'weighing-management',
+    image: '/projects/bd_weighbridge.png',
     title: 'Weighing Management',
     shortDesc: 'Advanced Weigh-in-Motion and static truck weighing scales.',
     description: `ATT designs and manufactures high-capacity weighing systems essential for infrastructure protection and logistics. Our portfolio includes 100+ Metric Ton Weighbridge scales, portable weigh pads, and sophisticated Weigh-in-Motion (WIM) systems integrated into major highways and bridges (like Bangabandhu Bridge) to prevent structural damage from overloaded vehicles.`,
@@ -78,6 +80,7 @@ export const solutions: Solution[] = [
   {
     id: 4,
     slug: 'civil-work',
+    image: '/slider/bd_heavy_engineering.png',
     title: 'Civil Work & Building Construction',
     shortDesc: 'Civil contractors, builders, and real estate developers for major infrastructure.',
     description: `ATT's civil engineering arm executes complex government and private infrastructure projects. From constructing approach roads and bridges in Purbachal New Town, to building schools, culverts, and undertaking extensive river bank protection works (e.g., Atai River), we bring robust engineering capabilities to national development.`,
@@ -95,6 +98,7 @@ export const solutions: Solution[] = [
   {
     id: 5,
     slug: 'access-control',
+    image: '/projects/bd_access_control.png',
     title: 'Human & Vehicle Access Control',
     shortDesc: 'Intelligent access management for critical infrastructure and facilities.',
     description: `We secure critical facilities with advanced access control systems. Our solutions range from biometric turnstiles, speed lanes, and trilocks for human access (as deployed at the Bangladesh Secretariat) to automatic boom barriers, license plate recognition (LPR), and UHF RFID readers for vehicular access control at ports and commercial sites.`,
@@ -112,6 +116,7 @@ export const solutions: Solution[] = [
   {
     id: 6,
     slug: 'cctv-surveillance',
+    image: '/slider/hero_access_security.png',
     title: 'CCTV Surveillance & Security',
     shortDesc: 'Comprehensive video surveillance and perimeter security systems.',
     description: `ATT installs and maintains extensive CCTV surveillance networks for high-security environments like Chittagong Port Authority. Our offerings include IP and analog cameras, PTZ doom/bullet cameras, network switches, NVRs, and complete control room setups, ensuring 24/7 monitoring and perimeter protection for fencing, gates, and buildings.`,
@@ -129,6 +134,7 @@ export const solutions: Solution[] = [
   {
     id: 7,
     slug: 'parking-management',
+    image: '/projects/bd_access_control.png',
     title: 'Parking Management',
     shortDesc: 'Automated parking systems with slot-wise information and software integration.',
     description: `We offer complete Parking Management solutions designed to optimize space utilization and streamline vehicle flow. Our systems feature automated in-out parking gates, ticket dispensers, and integrated software that provides real-time slot-wise parking information, ideal for commercial buildings, airports, and urban parking facilities.`,
