@@ -117,7 +117,7 @@ export const products: Product[] = [
       'Government & embassy compounds',
       'Parking management systems',
     ],
-    image: '/products/access_control_realistic.png',
+    image: '/projects/real_access_new.png',
   },
   {
     id: 5,
@@ -141,7 +141,7 @@ export const products: Product[] = [
       'School zone speed control',
       'Intersection management',
     ],
-    image: '/products/traffic_products_realistic.png',
+    image: '/projects/real_traffic.png',
   },
   {
     id: 6,

@@ -26,7 +26,7 @@ export const projects: Project[] = [
     icon: 'Building2',
     color: 'from-blue-600 to-blue-800',
     achievements: ['4-Lane Toll Plaza Installation', 'Long-term Operation & Maintenance', 'Revenue collection management', 'Hardware manufacturing'],
-    image: '/projects/real_toll_plaza.png',
+    image: '/projects/nalka_toll.png',
   },
   {
     id: 2,
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     icon: 'Activity',
     color: 'from-teal-600 to-cyan-800',
     achievements: ['910m River Bank Protection', 'Erosion control', 'Water resource management', 'Large-scale civil engineering'],
-    image: '/projects/real_civil.png',
+    image: '/projects/atai_river.png',
   },
   {
     id: 9,

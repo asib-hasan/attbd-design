@@ -84,7 +84,7 @@ export const services: Service[] = [
     description: `ATT operates certified oil tanker vessels for the safe transportation of petroleum products including diesel, furnace oil, and lubricants across Bangladesh's waterways, meeting all regulatory requirements.`,
     icon: 'Fuel',
     color: 'from-red-600 to-rose-800',
-    image: '/projects/real_tanker.png',
+    image: '/projects/real_tanker_new.png',
     highlights: ['Petroleum product transport', 'Certified tank vessels', 'Spill prevention systems', 'Regulatory compliance', 'Insurance & documentation', 'Port coordination'],
   },
   {
