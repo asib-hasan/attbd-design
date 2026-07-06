@@ -202,7 +202,7 @@ const companyStats = [
 
 const founder = {
   name: 'Late Prof. Abur Razzaque',
-  image: 'abur_razzaque.png',
+  image: 'Whatsapp/Razzaque.jpg',
   title: 'Founder',
   bio: 'With an MSc in Biochemistry from the University of Dhaka, Prof. Abur Razzaque was the founder and principal of ATT. A visionary leader, Prof. Razzaque played a pivotal role in the company\'s growth by leading its marketing and business development initiatives alongside his son. His expertise, leadership, and dedication established a strong foundation and enduring legacy that continues to inspire and guide future generations of the company.',
 }
@@ -210,25 +210,25 @@ const founder = {
 const board = [
   {
     name: 'Engr. Mehboob Kabir',
-    image: 'mehboob_kabir.PNG',
+    image: 'Whatsapp/Mehboob.jpg',
     title: 'Managing Director',
     bio: 'B.Sc in CSE, DBA from Mehran Engineering University. Guided ATT\'s business strategies and rapid growth since 1998.',
   },
   {
     name: 'Dr. Sifat Farhana Nahid',
-    image: 'dr_sifat_color.png',
+    image: 'dr_sifat.jpg',
     title: 'Deputy Managing Director',
     bio: 'M.B.B.S in Dhaka National Medical College. Key person in PR and Finance, ensuring operational health.',
   },
   {
     name: 'Shams Kader',
-    image: 'shams_kader_color.png',
+    image: 'Whatsapp/shams_kader.jpg',
     title: 'Director',
     bio: 'Maintaining on-site operations of the construction sector with dedication, technical knowledge, and a focus on safety.',
   },
   {
     name: 'Nafisa Nahar',
-    image: 'nafisa_nahar.PNG',
+    image: 'Whatsapp/nafisa.jpg',
     title: 'Director',
     bio: 'Overseeing maritime operations with efficiency, precision, and strong leadership.',
   },
