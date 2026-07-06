@@ -73,7 +73,7 @@
     <!-- Banner 3: Shipbuilding -->
     <div class="relative w-full h-[400px] lg:h-[500px] overflow-hidden group">
       <div class="absolute inset-0">
-        <img src="/projects/real_cargo.png" alt="Shipbuilding & Navigation" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/projects/real_tanker_new.png" alt="Shipbuilding & Navigation" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from left to right -->
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
