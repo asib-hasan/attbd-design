@@ -11,8 +11,7 @@
       
       <!-- Work Item 1 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <!-- Make sure image has transition for hover effect -->
-        <img src="/projects/1.png" alt="Chittagong Port Truck Scale" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_weigh1.png" alt="Chittagong Port Truck Scale" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">
@@ -31,7 +30,7 @@
 
       <!-- Work Item 2 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <img src="/projects/2.png" alt="Sylhet Bridge Toll Plaza" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_toll1.png" alt="Sylhet Bridge Toll Plaza" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">
@@ -49,7 +48,7 @@
 
       <!-- Work Item 3 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <img src="/projects/3.png" alt="Natore Road Toll System" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_toll2.png" alt="Natore Road Toll System" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">
@@ -67,7 +66,7 @@
 
       <!-- Work Item 4 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <img src="/projects/4.png" alt="Gobrakura Land Port Weighbridge" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_weigh2.png" alt="Gobrakura Land Port Weighbridge" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">
@@ -85,7 +84,7 @@
 
       <!-- Work Item 5 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <img src="/projects/5.png" alt="Highway Surveillance" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_cctv.png" alt="Highway Surveillance" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">
@@ -103,7 +102,7 @@
 
       <!-- Work Item 6 -->
       <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden group cursor-pointer">
-        <img src="/projects/toll-plaza.png" alt="Automated Toll Operations" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
+        <img src="/projects/ourwork_toll3.png" alt="Automated Toll Operations" class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-[800ms] ease-out" />
         
         <!-- Hover Overlay -->
         <div class="absolute bottom-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-t border-white/10 transform translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex justify-between items-stretch">

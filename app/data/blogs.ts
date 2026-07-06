@@ -34,7 +34,7 @@ export const blogs: Blog[] = [
     author: 'ATT Editorial Team',
     date: 'May 15, 2026',
     category: 'Technology',
-    image: '/projects/toll-plaza.png',
+    image: '/projects/ourwork_toll1.png',
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ export const blogs: Blog[] = [
     author: 'Engineering Dept',
     date: 'April 28, 2026',
     category: 'Infrastructure',
-    image: '/projects/weigh-bridge.png',
+    image: '/projects/ourwork_weigh1.png',
   },
   {
     id: 3,
@@ -78,6 +78,6 @@ export const blogs: Blog[] = [
     author: 'Security Systems Division',
     date: 'March 10, 2026',
     category: 'Security',
-    image: '/projects/cctv.png',
+    image: '/projects/ourwork_cctv.png',
   }
 ]

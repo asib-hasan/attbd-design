@@ -11,9 +11,9 @@
     </div>
 
     <!-- Banner 1: Toll Management -->
-    <div class="relative w-full h-[600px] lg:h-[700px] mb-8 overflow-hidden group">
+    <div class="relative w-full h-[400px] lg:h-[500px] overflow-hidden group">
       <div class="absolute inset-0">
-        <img src="/slider/bd_toll_plaza.png" alt="Toll Management" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/projects/real_highway.png" alt="Toll Management" class="w-full h-full object-cover [image-rendering:crisp-edges] contrast-125 saturate-110 transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from left to right -->
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
@@ -41,9 +41,9 @@
     </div>
 
     <!-- Banner 2: Civil Construction -->
-    <div class="relative w-full h-[600px] lg:h-[700px] mb-8 overflow-hidden group">
+    <div class="relative w-full h-[400px] lg:h-[500px] overflow-hidden group">
       <div class="absolute inset-0">
-        <img src="/slider/bd_heavy_engineering.png" alt="Civil Construction" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/projects/real_civil.png" alt="Civil Construction" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from right to left -->
       <div class="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent"></div>
@@ -71,10 +71,9 @@
     </div>
 
     <!-- Banner 3: Shipbuilding -->
-    <div class="relative w-full h-[600px] lg:h-[700px] overflow-hidden group">
+    <div class="relative w-full h-[400px] lg:h-[500px] overflow-hidden group">
       <div class="absolute inset-0">
-        <!-- Using a placeholder image, update with an actual ship/port image if available -->
-        <img src="/More/3.png" alt="Shipbuilding & Navigation" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
+        <img src="/projects/real_cargo.png" alt="Shipbuilding & Navigation" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out" />
       </div>
       <!-- Dark gradient fading from left to right -->
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>

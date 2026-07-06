@@ -139,7 +139,26 @@
           <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Board of Directors</h2>
           <div class="w-24 h-1 bg-accent-500 mx-auto rounded-full"></div>
         </div>
-        
+        <!-- Founder Highlight -->
+        <div class="max-w-4xl mx-auto mb-32 animate-fade-up">
+          <div class="bg-slate-900/50 backdrop-blur-sm rounded-[2rem] p-8 md:p-12 border border-white/10 flex flex-col md:flex-row items-center gap-10 hover:border-accent-500/30 hover:bg-slate-800/50 transition-all duration-500 shadow-2xl relative">
+            <div class="absolute -top-10 -right-10 text-[120px] text-white/5 font-black z-0 pointer-events-none">
+              &ldquo;
+            </div>
+            <!-- Image -->
+            <div class="w-64 h-64 md:w-72 md:h-80 shrink-0 rounded-3xl overflow-hidden shadow-2xl relative z-10 ring-4 ring-slate-800 group">
+              <img :src="`/People_images/${founder.image}`" :alt="founder.name" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            
+            <!-- Content -->
+            <div class="text-center md:text-left relative z-10">
+              <div class="text-accent-500 font-black uppercase tracking-widest text-sm mb-2">{{ founder.title }}</div>
+              <h3 class="text-3xl md:text-4xl font-black text-white mb-6">{{ founder.name }}</h3>
+              <p class="text-slate-300 md:text-lg leading-relaxed text-justify md:text-left">{{ founder.bio }}</p>
+            </div>
+          </div>
+        </div>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-24 text-center mt-16 pb-8">
           <div v-for="(member, idx) in board" :key="member.name" class="group animate-fade-up h-full" :class="`delay-${(idx + 1) * 100}`">
             
@@ -155,19 +174,6 @@
               <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{{ member.name }}</h3>
               <div class="text-accent-500 font-bold uppercase tracking-widest text-xs mb-4">{{ member.title }}</div>
               <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{{ member.bio }}</p>
-              
-              <!-- Social Links -->
-              <div class="flex gap-3 justify-center mt-auto pb-2">
-                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                </a>
-                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-800 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="#" class="w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-inner hover:scale-110 border border-white/5">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                </a>
-              </div>
             </div>
             
           </div>
@@ -194,6 +200,13 @@ const companyStats = [
   { value: 31, label: 'Owned Vessels', sub: 'Cargo & Tankers', suffix: '' },
 ]
 
+const founder = {
+  name: 'Late Prof. Abur Razzaque',
+  image: 'abur_razzaque.png',
+  title: 'Founder',
+  bio: 'With an MSc in Biochemistry from the University of Dhaka, Prof. Abur Razzaque was the founder and principal of ATT. A visionary leader, Prof. Razzaque played a pivotal role in the company\'s growth by leading its marketing and business development initiatives alongside his son. His expertise, leadership, and dedication established a strong foundation and enduring legacy that continues to inspire and guide future generations of the company.',
+}
+
 const board = [
   {
     name: 'Engr. Mehboob Kabir',
@@ -203,13 +216,13 @@ const board = [
   },
   {
     name: 'Dr. Sifat Farhana Nahid',
-    image: 'sifat_farhana.PNG',
+    image: 'dr_sifat_color.png',
     title: 'Deputy Managing Director',
     bio: 'M.B.B.S in Dhaka National Medical College. Key person in PR and Finance, ensuring operational health.',
   },
   {
     name: 'Shams Kader',
-    image: 'shams_kader.PNG',
+    image: 'shams_kader_color.png',
     title: 'Director',
     bio: 'Maintaining on-site operations of the construction sector with dedication, technical knowledge, and a focus on safety.',
   },

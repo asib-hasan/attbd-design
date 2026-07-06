@@ -27,7 +27,7 @@
           <!-- Main Image -->
           <div class="absolute top-0 right-0 w-4/5 h-4/5 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
             <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="/More/3.png" alt="Infrastructure Tech" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            <img src="/More/infrastructure-tech.png" alt="Infrastructure Tech" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
           </div>
           
           <!-- Overlapping Image -->

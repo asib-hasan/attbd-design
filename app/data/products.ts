@@ -21,7 +21,7 @@ export const products: Product[] = [
     description: `ATT's traffic counters and classifiers are the go-to instruments for transport authorities requiring accurate vehicle count and classification data. Using pneumatic road tubes, inductive loops, or infrared sensors, these portable and permanent devices record vehicle volumes, speeds, and vehicle class (motorcycle, car, truck, bus, etc.) with high accuracy. Data is stored internally and can be downloaded wirelessly or via USB for analysis using ATT's reporting software.`,
     icon: 'Activity',
     color: 'from-blue-500 to-blue-700',
-    image: '/products/counters_classifiers.png',
+    image: '/products/bd_counters_classifiers.png',
     content: `
       <h3>Advanced Traffic Classification</h3>
       <p>ATT's traffic counters and classifiers are the go-to instruments for transport authorities requiring accurate vehicle count and classification data. Using pneumatic road tubes, inductive loops, or infrared sensors, these portable and permanent devices record vehicle volumes, speeds, and vehicle class with high accuracy.</p>
@@ -69,7 +69,7 @@ export const products: Product[] = [
       'Bridge load monitoring',
       'Toll enforcement',
     ],
-    image: '/products/axle_sensors.png',
+    image: '/products/bd_axle_sensors.png',
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const products: Product[] = [
       'Construction site vehicle monitoring',
       'Research & survey programs',
     ],
-    image: '/products/portable_weigh_pads.png',
+    image: '/products/real_weighing_pad.png',
   },
   {
     id: 4,
@@ -117,7 +117,7 @@ export const products: Product[] = [
       'Government & embassy compounds',
       'Parking management systems',
     ],
-    image: '/slider/hero_access_security.png',
+    image: '/products/access_control_realistic.png',
   },
   {
     id: 5,
@@ -141,7 +141,7 @@ export const products: Product[] = [
       'School zone speed control',
       'Intersection management',
     ],
-    image: '/slider/hero_traffic_system.png',
+    image: '/products/traffic_products_realistic.png',
   },
   {
     id: 6,
@@ -165,7 +165,7 @@ export const products: Product[] = [
       'Toll plazas (weight-based tolling)',
       'Research & pavement studies',
     ],
-    image: '/products/wim_controller.png',
+    image: '/products/real_hardware.png',
   },
   {
     id: 7,
@@ -237,6 +237,6 @@ export const products: Product[] = [
       'Toll rate information boards',
       'Queue length indicators',
     ],
-    image: '/products/remote_display.png',
+    image: '/products/real_software.png',
   },
 ]
