@@ -44,7 +44,7 @@ export const solutions: Solution[] = [
   {
     id: 2,
     slug: 'ship-building',
-    image: '/More/shams_navigation.png',
+    image: '/More/shams_navigation.jpg',
     title: 'Ship Building, Navigation & Rescue',
     shortDesc: 'Comprehensive marine services, fleet operation, and ship building.',
     description: `Through our maritime divisions—Mehboob & Masood Navigation, Shams Navigation, and Engineer Mehboob Ship Builders—we offer extensive ship operation, cargo carrier services, and ship building. We own and operate a large fleet of inland cargo vessels and oil tankers, transporting essential commodities across Bangladesh's waterways and internationally to India and Myanmar.`,
