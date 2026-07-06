@@ -5,6 +5,7 @@
 .nitro
 .cache
 dist
+profile.pdf
 
 # Node dependencies
 node_modules

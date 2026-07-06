@@ -213,7 +213,7 @@ export const products: Product[] = [
       'Off-grid CCTV systems',
       'Solar toll booths',
     ],
-    image: '/products/solar_system.png',
+    image: '/products/bd_solar_panels.png',
   },
   {
     id: 9,
