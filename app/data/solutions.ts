@@ -134,7 +134,7 @@ export const solutions: Solution[] = [
   {
     id: 7,
     slug: 'parking-management',
-    image: '/projects/real_parking.png',
+    image: '/projects/real_parking_new.png',
     title: 'Parking Management',
     shortDesc: 'Automated parking systems with slot-wise information and software integration.',
     description: `We offer complete Parking Management solutions designed to optimize space utilization and streamline vehicle flow. Our systems feature automated in-out parking gates, ticket dispensers, and integrated software that provides real-time slot-wise parking information, ideal for commercial buildings, airports, and urban parking facilities.`,

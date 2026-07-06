@@ -23,7 +23,7 @@
           <div class="relative animate-fade-up delay-200">
             <!-- Decorative abstract shape -->
             <div class="absolute -inset-4 bg-slate-900 border border-white/10 rounded-[3rem] transform rotate-3"></div>
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" alt="ATT Office" class="relative rounded-[2.5rem] w-full h-[500px] object-cover shadow-2xl" />
+            <img src="/projects/real_toll_plaza.png" alt="ATT Toll Plaza Operations" class="relative rounded-[2.5rem] w-full h-[500px] object-cover shadow-2xl" />
           </div>
         </div>
       </div>
