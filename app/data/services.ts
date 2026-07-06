@@ -95,7 +95,7 @@ export const services: Service[] = [
     description: `Shams Navigation is ATT's dedicated carrier service brand providing freight forwarding and navigation services, leveraging our fleet and deep knowledge of Bangladesh's waterway network.`,
     icon: 'Navigation',
     color: 'from-indigo-600 to-blue-800',
-    image: '/projects/real_cargo.png',
+    image: '/projects/shams_navigation.jpg',
     highlights: ['Freight forwarding', 'Full cargo management', 'Port handling & documentation', 'Last-mile delivery', 'Multi-modal transport', 'Real-time tracking'],
   },
 ]
