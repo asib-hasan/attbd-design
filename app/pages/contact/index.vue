@@ -37,11 +37,7 @@
                 </div>
               </div>
 
-              <!-- Web -->
-              <div v-if="info.web" class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-slate-400 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                <a :href="`https://${info.web}`" target="_blank" rel="noopener noreferrer" class="text-white font-bold hover:text-accent-400 transition-colors block text-sm">{{ info.web }}</a>
-              </div>
+
             </div>
 
 
@@ -160,24 +156,21 @@ const contactInfo = [
     color: 'border-l-blue-500',
     address: 'Asian Traffic Technologies Limited\nHouse # 67, Road # 27, Flat # 5A,\nGulshan Circle -1, Dhaka - 1212,\nBangladesh.',
     phones: ['+880 1811-860454', '+880 1728-795392'],
-    emails: ['info@att-bd.com', 'shamsnavigation@att-bd.com'],
-    web: 'www.att-bd.com'
+    emails: ['info@att-bd.com', 'shamsnavigation@att-bd.com']
   },
   {
     label: 'Registered Office',
     color: 'border-l-accent-500',
     address: 'House-5/1/M, Mohonpur, Ring\nRoad, Shamoly, Dhaka-1207,\nBangladesh',
     phones: [],
-    emails: ['info@att-bd.com', 'shamsnavigation@att-bd.com'],
-    web: 'www.att-bd.com'
+    emails: ['info@att-bd.com', 'shamsnavigation@att-bd.com']
   },
   {
     label: 'Chattogram Office',
     color: 'border-l-slate-500',
     address: '37, Kaderi Chamber (4th Floor),\nAgrabad, Chattogram,\nBangladesh',
     phones: ['+880 1717-271844'],
-    emails: [],
-    web: ''
+    emails: []
   },
 ]
 </script>
