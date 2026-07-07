@@ -44,21 +44,7 @@
               </div>
             </div>
 
-            <!-- Map placeholder -->
-            <div class="bg-slate-900 border border-white/10 rounded-3xl p-8 text-white relative overflow-hidden">
-              <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-500/10 blur-3xl rounded-full"></div>
-              <div class="text-[10px] font-bold text-accent-500 uppercase tracking-widest mb-3 relative z-10">Location</div>
-              <p class="text-sm text-slate-300 leading-relaxed mb-6 relative z-10">Asian Traffic Technologies Limited<br>House # 67, Road # 27, Flat # 5A,<br>Gulshan Circle -1, Dhaka - 1212, Bangladesh.</p>
-              <a
-                href="https://maps.google.com/?q=House+67+Road+27+Gulshan+Circle+1+Dhaka+Bangladesh"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-center gap-2 text-accent-500 text-sm font-bold hover:text-white transition-colors uppercase tracking-widest relative z-10"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-                Google Maps
-              </a>
-            </div>
+
           </div>
 
           <!-- Contact Form -->
